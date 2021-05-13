@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cg.wbd.grandemonstration.controller.CustomerControllerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-05-13T02:55:26" hostname="HSLUC" time="0.241">
+  <properties/>
+  <testcase name="showInformationSuccessControlling()" classname="cg.wbd.grandemonstration.controller.CustomerControllerTest" time="0.185"/>
+  <testcase name="customerBrowseControlling()" classname="cg.wbd.grandemonstration.controller.CustomerControllerTest" time="0.021"/>
+  <testcase name="customersListPageIsExists()" classname="cg.wbd.grandemonstration.controller.CustomerControllerTest" time="0.015"/>
+  <testcase name="customerUpdateSuccessControlling()" classname="cg.wbd.grandemonstration.controller.CustomerControllerTest" time="0.017"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+May 13, 2021 9:55:24 AM org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
+INFO: HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+May 13, 2021 9:55:24 AM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {5.3.0.Final}
+May 13, 2021 9:55:24 AM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+May 13, 2021 9:55:24 AM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
+May 13, 2021 9:55:25 AM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+May 13, 2021 9:55:25 AM org.hibernate.type.spi.TypeConfiguration$Scope setSessionFactory
+WARN: HHH000233: Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@3fe97d3f after already scoped org.hibernate.internal.SessionFactoryImpl@3fe97d3f
+May 13, 2021 9:55:26 AM org.hibernate.validator.internal.util.Version <clinit>
+INFO: HV000001: Hibernate Validator 6.0.10.Final
+]]></system-err>
+</testsuite>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Information</title>
+  <style>
+    .error {
+      color: red;
+      font-size: small;
+    }
+  </style>
+</head>
+<body>
+<form action="/customers" method="post" th:object="${customer}">
+  <fieldset>
+    <legend>Customer Information</legend>
+    <input type="hidden" th:field="*{id}">
+    <table>
+      <tr>
+        <td>Id</td>
+        <td th:text="${customer.id}"></td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>
+          <input type="text" th:field="*{name}">
+          <span class="error" th:if="${#fields.hasErrors('name')}" th:text="#{error.customer.name}"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>
+          <input type="text" th:field="*{email}">
+          <span class="error" th:if="${#fields.hasErrors('email')}"
+                th:text="#{error.customer.email}"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>
+          <input type="text" th:field="*{address}">
+          <span class="error" th:if="${#fields.hasErrors('address')}"
+                th:text="#{error.customer.address}"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>Province</td>
+        <td>
+          <select name="province">
+            <option th:each="p : ${provinces}" th:text="${p.name}" th:value="${p.id}"></option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="Update">
+          <span class="error" th:if="${#fields.hasErrors()}"
+                th:text="#{error.customer.fields} + '. '"></span>
+          <span class="error" th:if="${#fields.hasGlobalErrors()}"
+                th:text="#{error.customer.global}"></span>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</form>
+<a href="/customers">Back to list</a>.
+<hr>
+Language: <a href="?lang=en">English</a> | <a href="?lang=fr">French</a>
+</body>
+</html>
